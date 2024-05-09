@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d293e6;
+}
+
+.yes h2 {
+    font-family: 'Nunito';
+    font-size: 30px;
+    font-weight: bold;
+    color: #8f659c;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.slider-wrapper h3 {
+    font-family: 'Arial', sans-serif; /* Change the font family */
+    font-size: 20px; /* Change the font size */
+    color: #8f659c; /* Change the color to red */
+    text-align: center; /* Center the text */
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(.5);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+.animated-heart {
+    /*animation: scale 2s infinite;*/
+    animation: heart 4s linear infinite;
+    height: 1em;
+    width: auto;
+}
+
+.slider-wrapper .image-slider .image-item {
+    
+    width: 300px;
+    height: 300px;
+    object-fit: cover; 
+    margin: auto;
+}

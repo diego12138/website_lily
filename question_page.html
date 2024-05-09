@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="utf-8">
+    <!-- Set the compatibility mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the title of the document -->
+    <title>Love Expression</title>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="question_style.css">
+</head>
+<body class="index-body">
+    <audio id="background-audio" src="Something Stupid (From Better Call Saul).mp3" loop></audio>
+    <!-- Container div to center the content -->
+    <div class="container">
+        <!--Timer div-->
+        <div id="timer">
+            <h1>Our first date was...</h1>
+            <b id="d"></b> Days 
+            <b id="h"></b> Hours
+            <b id="m"></b> Minutes
+            <b id="s"></b> Seconds
+        </div>
+        <!-- Div for the love question and answers -->
+        <div class="love">
+            <!-- The love question -->
+            <h2>Do You Wanna Go on another <span>Date</span> with me?</h2>
+            <!-- The "No" answer -->
+            <a id="no" >No</a>
+            <!-- The "Yes" answer -->
+            <a id="yes" href="yes.html">Yes</a>
+            
+            
+        </div>
+        
+
+    </div>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Get the "Yes" link element
+        var yesLink = document.getElementById('yes');
+        // Get the "No" link element
+        var noLink = document.getElementById('no');
+        //Get the audio element
+        var audio = document.getElementById('background-audio');
+
+        // Add a click event listener to the "Yes" link
+        yesLink.addEventListener('click', function(event) {
+            // Play the audio
+            audio.play();
+            // rest of your code
+        });
+
+        // Add a click event listener to the "No" link
+        noLink.addEventListener('click', function(event) {
+            // Play the audio
+            audio.play();
+            // rest of your code
+        });
+        // Add a click event listener to the "No" link
+        noLink.addEventListener('click', function(event) {
+            // Prevent the default action of the click event
+            //event.preventDefault();
+            // Get the current font size of the "Yes" link
+            var currentSize = window.getComputedStyle(yesLink).fontSize;
+            // Increase the font size by 10
+            var newSize = parseInt(currentSize) + 20;
+            // Set the new font size to the "Yes" link
+            yesLink.style.fontSize = newSize + 'px';
+
+            var x = Math.random() * (window.innerWidth - noLink.offsetWidth);
+            var y = Math.random() * (window.innerHeight - noLink.offsetHeight);
+            noLink.style.left = `${x}px`;
+            noLink.style.top = `${y}px`;
+
+        });
+    </script>
+
+    <!-- HTML -->
+    <div class="bottom-image">
+        <img class="animated-dog" src="dog_love.png" alt="Dog Love">
+    </div>
+
+    <script src="time_set.js"></script>
+    
+</body>
+</html>

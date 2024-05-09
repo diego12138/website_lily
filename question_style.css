@@ -1,0 +1,106 @@
+/* Reset padding and margin for all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Set the container to fill the entire viewport and center the text */
+.container {
+    height: 100vh;
+    width: 100vw;
+    color: #444;
+    background: #fcd4ec;
+    text-align: center;
+}
+
+/* Add padding to the top of the love, yes, and no classes */
+.love, .yes, .no {
+    padding-top: 15%;
+}
+
+/* Set the font size for h2 elements and add a margin to the bottom */
+h2 {
+    font-size: 72px;
+    margin-bottom: 30px;
+}
+
+/* Set the color for span elements inside the love class */
+.love span {
+    color: #ed91ca;
+}
+
+/* Style the links inside the love class */
+.love a {
+    text-decoration: none;
+    background: #eee;
+    padding: 5px;
+    margin: 5px 10px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Set the color for the no and yes IDs */
+#no {
+    color: red;
+    position: fixed;
+    transition: 0.5s;
+}
+#yes {
+    color: green;
+}
+
+/* Set the font size for the no and yes IDs */
+#no, #yes {
+    font-size: 16px;
+}
+
+/* Set the size for images and add an animation */
+.index-body img {
+    height: 30px;
+    width: 30px;
+}
+
+#timer{
+    font-size : 24px;
+    color: #b06b9a;
+    text-align: center;
+}
+#timer b{
+    margin : 10px;
+    
+}
+.bottom-image img {
+    width: 300px; /* Replace with the desired width */
+    height: 200px; /* Replace with the desired height */
+}
+
+.bottom-image {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#no {
+    z-index: 1; /* Any positive number will work */
+    /* Other styles */
+}
+/* Define the heart animation */
+@keyframes scale {
+    0% {
+        transform: scale(.5);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+
+
+.animated-dog {
+    animation: scale 4s linear infinite;
+
+}
